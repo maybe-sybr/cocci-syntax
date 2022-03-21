@@ -18,6 +18,7 @@ syn region CocciGroup matchgroup=CocciGroupDelim start="^@[^@]*@$" end="^@@$" co
 
 syn match CocciLineRemoved      "^-.*"
 syn match CocciLineAdded        "^+.*"
+syn match CocciLineMarked       "^\*.*"
 syn match CocciComment          "//.*$"
 
 syn case ignore
@@ -32,6 +33,7 @@ syn match CocciError            "^[ \t][+-].*"
 " Highlight!
 hi def link CocciLineRemoved    Special
 hi def link CocciLineAdded      Identifier
+hi def link CocciLineMarked     Constant
 hi def link CocciError          Error
 hi def link CocciKeywords       Keyword
 hi def link CocciGroupDelim     PreProc
